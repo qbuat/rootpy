@@ -281,7 +281,7 @@ def test_overall_efficiency():
         Eff_1bin = Efficiency(Hist(1, -3, 3), Hist(1, -3, 3))
         Eff.SetStatisticOption(stat_op)
         Eff_1bin.SetStatisticOption(stat_op)
-    
+
         for i in xrange(1000):
             x = gauss(0, 3.6)
             w = uniform(0, 1)
@@ -289,11 +289,11 @@ def test_overall_efficiency():
             Eff.Fill(passed, x)
             Eff_1bin.Fill(passed, x)
 
-        assert_almost_equal(Eff.overall_efficiency(overflow=True)[0], 
+        assert_almost_equal(Eff.overall_efficiency(overflow=True)[0],
                             Eff_1bin.overall_efficiency(overflow=True)[0])
-        assert_almost_equal(Eff.overall_efficiency(overflow=True)[1], 
+        assert_almost_equal(Eff.overall_efficiency(overflow=True)[1],
                             Eff_1bin.overall_efficiency(overflow=True)[1])
-        assert_almost_equal(Eff.overall_efficiency(overflow=True)[2], 
+        assert_almost_equal(Eff.overall_efficiency(overflow=True)[2],
                             Eff_1bin.overall_efficiency(overflow=True)[2])
 
 def test_efficiency():

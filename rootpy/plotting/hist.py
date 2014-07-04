@@ -2535,8 +2535,8 @@ class Efficiency(Plottable, NamelessConstructorObject, QROOT.TEfficiency):
         hpass = self.passed.merge_bins([bins_to_merge])
         htot = self.total.merge_bins([bins_to_merge])
         tot_eff = Efficiency(hpass, htot)
-        return (tot_eff.GetEfficiency(1), 
-                tot_eff.GetEfficiencyErrorLow(1), 
+        return (tot_eff.GetEfficiency(1),
+                tot_eff.GetEfficiencyErrorLow(1),
                 tot_eff.GetEfficiencyErrorUp(1))
 
     @property
